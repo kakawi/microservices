@@ -17,6 +17,8 @@ dependencies {
     compile project(":common")
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
 }
 
 mainClassName = 'com.hlebon.producer.ProducerApplication'
