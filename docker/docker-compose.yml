@@ -15,6 +15,13 @@ services:
       - rabbit1:/var/lib/rabbitmq
       - ./conf/:/etc/rabbitmq/
     command:  bash -c "sleep 10; rabbitmq-server;"
+  producer_1:
+    networks:
+      - back
+    hostname: producer_1
+    image: "producer-boot"
+    ports:
+      - "8080:8080"
 volumes:
   rabbit1:
     driver: local
